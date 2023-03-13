@@ -1,7 +1,7 @@
 /* Usuários */
-INSERT INTO tb_user (name, email, password) VALUES ('Bob Brown', 'bob@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
-INSERT INTO tb_user (name, email, password) VALUES ('Ana Brown', 'ana@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
-INSERT INTO tb_user (name, email, password) VALUES ('Maria Green', 'maria@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('bob', 'bob@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('ana', 'ana@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+--INSERT INTO tb_user (name, email, password) VALUES ('Maria Green', 'maria@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
 
 /* Roles */
 INSERT INTO tb_role (authority) VALUES ('ROLE_VISITOR');
@@ -10,11 +10,12 @@ INSERT INTO tb_role (authority) VALUES ('ROLE_MEMBER');
 -- Bob -> somente visitor
 INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
 -- Ana -> member
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 
 -- Maria -> visitor & member
-INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
-INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
+--INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
+--INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 
 /* Genre */
 INSERT INTO tb_genre (name) VALUES ('Fantasia');
